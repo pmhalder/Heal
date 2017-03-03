@@ -1,0 +1,985 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170302 23:05:57.795" generator="Robot 2.9.2 (Python 2.7.10 on darwin)">
+<suite source="/Users/priyankahalder/Documents/Heal/tests" id="s1" name="Tests">
+<suite source="/Users/priyankahalder/Documents/Heal/tests/functional_flows.robot" id="s1-s1" name="Functional Flows">
+<test id="s1-s1-t1" name="Scenario: Registration Page load">
+<kw type="setup" name="Setup Test" library="common">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'''${TEST_RUN_TYPE}''' not in ('LOCAL', 'SAUCELABS')</arg>
+<arg>Fail</arg>
+<arg>TEST_RUN_TYPE value not supported, only 'LOCAL' and 'SAUCELABS' allowed</arg>
+</arguments>
+<status status="PASS" endtime="20170302 23:05:57.980" starttime="20170302 23:05:57.978"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'''${TEST_RUN_TYPE}''' == 'LOCAL'</arg>
+<arg>Set Up Test Local</arg>
+</arguments>
+<kw name="Set Up Test Local" library="common">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${TEST_WEBSITE}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170302 23:05:57.983" level="INFO">Opening browser 'firefox' to base url 'https://patient.heal.com'</msg>
+<status status="PASS" endtime="20170302 23:06:01.217" starttime="20170302 23:05:57.982"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20170302 23:06:01.801" starttime="20170302 23:06:01.218"></status>
+</kw>
+<status status="PASS" endtime="20170302 23:06:01.802" starttime="20170302 23:05:57.982"></status>
+</kw>
+<status status="PASS" endtime="20170302 23:06:01.802" starttime="20170302 23:05:57.980"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'''${TEST_RUN_TYPE}''' == 'SAUCELABS'</arg>
+<arg>Set Up Test SauceLabs</arg>
+</arguments>
+<status status="PASS" endtime="20170302 23:06:01.804" starttime="20170302 23:06:01.803"></status>
+</kw>
+<status status="PASS" endtime="20170302 23:06:01.805" starttime="20170302 23:05:57.977"></status>
+</kw>
+<kw name="When user opens registration page" library="common">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${REGISTRATION_PAGE}</arg>
+</arguments>
+<msg timestamp="20170302 23:06:01.807" level="INFO">Opening url 'https://patient.heal.com/register'</msg>
+<status status="PASS" endtime="20170302 23:06:01.836" starttime="20170302 23:06:01.806"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${NONDISCRIMINATION_NOTICE}</arg>
+</arguments>
+<status status="PASS" endtime="20170302 23:06:03.514" starttime="20170302 23:06:01.836"></status>
+</kw>
+<status status="PASS" endtime="20170302 23:06:03.514" starttime="20170302 23:06:01.805"></status>
+</kw>
+<kw name="then registration page loads successfully" library="functional_keywords">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${HEAL_LOGO}</arg>
+</arguments>
+<status status="PASS" endtime="20170302 23:06:03.537" starttime="20170302 23:06:03.515"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${REGISTRATION_FORM}</arg>
+</arguments>
+<status status="PASS" endtime="20170302 23:06:03.561" starttime="20170302 23:06:03.537"></status>
+</kw>
+<status status="PASS" endtime="20170302 23:06:03.561" starttime="20170302 23:06:03.515"></status>
+</kw>
+<kw type="teardown" name="Close All Browsers" lib>
+</kw>
+<status status="PASS" endtime="20170302 23:03:47.152" starttime="20170302 23:03:38.354"></status>
+</kw>
+<kw name="then registration page loads successfully" library="functional_keywords">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${HEAL_LOGO}</arg>
+</arguments>
+<status status="PASS" endtime="20170302 23:03:47.454" starttime="20170302 23:03:47.154"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${REGISTRATION_FORM}</arg>
+</arguments>
+<status status="PASS" endtime="20170302 23:03:48.253" starttime="20170302 23:03:47.455"></status>
+</kw>
+<status status="PASS" endtime="20170302 23:03:48.254" starttime="20170302 23:03:47.153"></status>
+</kw>
+<kw type="teardown" name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20170302 23:03:48.414" starttime="20170302 23:03:48.255"></status>
+</kw>
+<tags>
+<tag>UI</tag>
+</tags>
+<status status="PASS" endtime="20170302 23:03:48.415" critical="yes" starttime="20170302 23:03:21.291"></status>
+</test>
+<test id="s1-s1-t2" name="Scenario: Registration without requied data">
+<kw type="setup" name="Setup Test" library="common">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'''${TEST_RUN_TYPE}''' not in ('LOCAL', 'SAUCELABS')</arg>
+<arg>Fail</arg>
+<arg>TEST_RUN_TYPE value not supported, only 'LOCAL' and 'SAUCELABS' allowed</arg>
+</arguments>
+<status status="PASS" endtime="20170302 23:03:48.421" starttime="20170302 23:03:48.419"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'''${TEST_RUN_TYPE}''' == 'LOCAL'</arg>
+<arg>Set Up Test Local</arg>
+</arguments>
+<status status="PASS" endtime="20170302 23:03:48.423" starttime="20170302 23:03:48.421"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'''${TEST_RUN_TYPE}''' == 'SAUCELABS'</arg>
+<arg>Set Up Test SauceLabs</arg>
+</arguments>
+<kw name="Set Up Test SauceLabs" library="common">
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on given items.</doc>
+<assign>
+<var>${capabilities}</var>
+</assign>
+<msg timestamp="20170302 23:03:48.426" level="INFO">${capabilities} = {}</msg>
+<status status="PASS" endtime="20170302 23:03:48.427" starttime="20170302 23:03:48.426"></status>
+</kw>
+<kw name="Set To Dictionary" library="Collections">
+<doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
+<arguments>
+<arg>${capabilities}</arg>
+<arg>platform</arg>
+<arg>Mac</arg>
+</arguments>
+<status status="PASS" endtime="20170302 23:03:48.428" starttime="20170302 23:03:48.427"></status>
+</kw>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>http://google.com</arg>
+<arg>${BROWSER}</arg>
+<arg>remote_url=http://phalder1:6dccd111-3e4b-44ce-b2c4-c6b9e6d24231@ondemand.saucelabs.com:80/wd/hub</arg>
+<arg>desired_capabilities=${capabilities}</arg>
+</arguments>
+<msg timestamp="20170302 23:03:48.429" level="INFO">Opening browser 'firefox' to base url 'http://google.com' through remote server at 'http://phalder1:6dccd111-3e4b-44ce-b2c4-c6b9e6d24231@ondemand.saucelabs.com:80/wd/hub'</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170302 23:08:59.752" level="FAIL">WebDriverException: Message: ERROR Internal Server Error
+</msg>
+<status status="FAIL" endtime="20170302 23:08:59.753" starttime="20170302 23:08:58.786"></status>
+</kw>
+<msg timestamp="20170302 23:08:59.753" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: ERROR Internal Server Error
+</msg>
+<msg timestamp="20170302 23:08:59.755" level="FAIL">BadStatusLine: ''</msg>
+<status status="FAIL" endtime="20170302 23:08:59.755" starttime="20170302 23:03:48.428"></status>
+</kw>
+<status status="FAIL" endtime="20170302 23:08:59.756" starttime="20170302 23:03:48.425"></status>
+</kw>
+<status status="FAIL" endtime="20170302 23:08:59.756" starttime="20170302 23:03:48.423"></status>
+</kw>
+<status status="FAIL" endtime="20170302 23:08:59.756" starttime="20170302 23:03:48.418"></status>
+</kw>
+<kw type="teardown" name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20170302 23:08:59.949" starttime="20170302 23:08:59.757"></status>
+</kw>
+<tags>
+<tag>error_message</tag>
+</tags>
+<status status="FAIL" endtime="20170302 23:08:59.950" critical="yes" starttime="20170302 23:03:48.416">Setup failed:
+BadStatusLine: ''</status>
+</test>
+<test id="s1-s1-t3" name="Scenario: Successful Registration">
+<kw type="setup" name="Setup Test" library="common">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'''${TEST_RUN_TYPE}''' not in ('LOCAL', 'SAUCELABS')</arg>
+<arg>Fail</arg>
+<arg>TEST_RUN_TYPE value not supported, only 'LOCAL' and 'SAUCELABS' allowed</arg>
+</arguments>
+<status status="PASS" endtime="20170302 23:08:59.955" starttime="20170302 23:08:59.953"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'''${TEST_RUN_TYPE}''' == 'LOCAL'</arg>
+<arg>Set Up Test Local</arg>
+</arguments>
+<status status="PASS" endtime="20170302 23:08:59.958" starttime="20170302 23:08:59.956"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'''${TEST_RUN_TYPE}''' == 'SAUCELABS'</arg>
+<arg>Set Up Test SauceLabs</arg>
+</arguments>
+<kw name="Set Up Test SauceLabs" library="common">
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on given items.</doc>
+<assign>
+<var>${capabilities}</var>
+</assign>
+<msg timestamp="20170302 23:08:59.961" level="INFO">${capabilities} = {}</msg>
+<status status="PASS" endtime="20170302 23:08:59.961" starttime="20170302 23:08:59.961"></status>
+</kw>
+<kw name="Set To Dictionary" library="Collections">
+<doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
+<arguments>
+<arg>${capabilities}</arg>
+<arg>platform</arg>
+<arg>Mac</arg>
+</arguments>
+<status status="PASS" endtime="20170302 23:08:59.963" starttime="20170302 23:08:59.962"></status>
+</kw>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>http://google.com</arg>
+<arg>${BROWSER}</arg>
+<arg>remote_url=http://phalder1:6dccd111-3e4b-44ce-b2c4-c6b9e6d24231@ondemand.saucelabs.com:80/wd/hub</arg>
+<arg>desired_capabilities=${capabilities}</arg>
+</arguments>
+<msg timestamp="20170302 23:08:59.963" level="INFO">Opening browser 'firefox' to base url 'http://google.com' through remote server at 'http://phalder1:6dccd111-3e4b-44ce-b2c4-c6b9e6d24231@ondemand.saucelabs.com:80/wd/hub'</msg>
+<status status="PASS" endtime="20170302 23:09:12.724" starttime="20170302 23:08:59.963"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20170302 23:09:13.163" starttime="20170302 23:09:12.725"></status>
+</kw>
+<status status="PASS" endtime="20170302 23:09:13.164" starttime="20170302 23:08:59.960"></status>
+</kw>
+<status status="PASS" endtime="20170302 23:09:13.164" starttime="20170302 23:08:59.958"></status>
+</kw>
+<status status="PASS" endtime="20170302 23:09:13.165" starttime="20170302 23:08:59.952"></status>
+</kw>
+<kw name="When user opens registration page" library="common">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${REGISTRATION_PAGE}</arg>
+</arguments>
+<msg timestamp="20170302 23:09:13.167" level="INFO">Opening url 'https://patient.heal.com/register'</msg>
+<status status="PASS" endtime="20170302 23:09:18.095" starttime="20170302 23:09:13.167"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${NONDISCRIMINATION_NOTICE}</arg>
+</arguments>
+<status status="PASS" endtime="20170302 23:09:21.981" starttime="20170302 23:09:18.096"></status>
+</kw>
+<status status="PASS" endtime="20170302 23:09:21.982" starttime="20170302 23:09:13.166"></status>
+</kw>
+<kw name="and user enters registration data" library="functional_keywords">
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>8</arg>
+</arguments>
+<assign>
+<var>${USERNAME}</var>
+</assign>
+<msg timestamp="20170302 23:09:21.985" level="INFO">${USERNAME} = Z5Ou5ITW</msg>
+<status status="PASS" endtime="20170302 23:09:21.985" starttime="20170302 23:09:21.984"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${FIRST_NAME_TXT_FLD}</arg>
+<arg>test</arg>
+</arguments>
+<msg timestamp="20170302 23:09:21.986" level="INFO">Typing text 'test' into text field 'xpath=//*[@id='input_0']'</msg>
+<status status="PASS" endtime="20170302 23:09:23.616" starttime="20170302 23:09:21.986"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${LAST_NAME_TXT_FLD}</arg>
+<arg>test</arg>
+</arguments>
+<msg timestamp="20170302 23:09:23.618" level="INFO">Typing text 'test' into text field 'xpath=//*[@id='input_1']'</msg>
+<status status="PASS" endtime="20170302 23:09:24.432" starttime="20170302 23:09:23.616"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${EMAIL}</arg>
+<arg>${USERNAME}@qa.com</arg>
+</arguments>
+<msg timestamp="20170302 23:09:24.434" level="INFO">Typing text 'Z5Ou5ITW@qa.com' into text field 'xpath=//*[@id='input_2']'</msg>
+<status status="PASS" endtime="20170302 23:09:25.736" starttime="20170302 23:09:24.433"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${PASSWORD}</arg>
+<arg>Password1</arg>
+</arguments>
+<msg timestamp="20170302 23:09:25.738" level="INFO">Typing text 'Password1' into text field 'xpath=//*[@id='input_3']'</msg>
+<status status="PASS" endtime="20170302 23:09:26.718" starttime="20170302 23:09:25.737"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${CONFIRM_PASSWORD}</arg>
+<arg>Password1</arg>
+</arguments>
+<msg timestamp="20170302 23:09:26.720" level="INFO">Typing text 'Password1' into text field 'xpath=//*[@id='input_4']'</msg>
+<status status="PASS" endtime="20170302 23:09:27.755" starttime="20170302 23:09:26.719"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${PHONE_NUMBER}</arg>
+<arg>18002002000</arg>
+</arguments>
+<msg timestamp="20170302 23:09:27.757" level="INFO">Typing text '18002002000' into text field 'xpath=//*[@id='input_5']'</msg>
+<status status="PASS" endtime="20170302 23:09:28.607" starttime="20170302 23:09:27.756"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${ZIPCODE}</arg>
+<arg>91403</arg>
+</arguments>
+<msg timestamp="20170302 23:09:28.609" level="INFO">Typing text '91403' into text field 'xpath=//*[@id='input_6']'</msg>
+<status status="PASS" endtime="20170302 23:09:29.372" starttime="20170302 23:09:28.608"></status>
+</kw>
+<status status="PASS" endtime="20170302 23:09:29.373" starttime="20170302 23:09:21.983"></status>
+</kw>
+<kw name="and clicks on Create account Button" library="functional_keywords">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${CREATE_ACCOUNT_BTN}</arg>
+</arguments>
+<msg timestamp="20170302 23:09:29.376" level="INFO">Clicking element 'xpath=//button[@type="submit"]'.</msg>
+<status status="PASS" endtime="20170302 23:09:30.488" starttime="20170302 23:09:29.375"></status>
+</kw>
+<status status="PASS" endtime="20170302 23:09:30.489" starttime="20170302 23:09:29.374"></status>
+</kw>
+<kw name="then user is able to register successfully" library="functional_keywords">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${BOOK_VISIT}</arg>
+</arguments>
+<status status="PASS" endtime="20170302 23:09:34.442" starttime="20170302 23:09:30.491"></status>
+</kw>
+<status status="PASS" endtime="20170302 23:09:34.443" starttime="20170302 23:09:30.491"></status>
+</kw>
+<kw type="teardown" name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20170302 23:09:34.634" starttime="20170302 23:09:34.444"></status>
+</kw>
+<tags>
+<tag>functional</tag>
+</tags>
+<status status="PASS" endtime="20170302 23:09:34.635" critical="yes" starttime="20170302 23:08:59.951"></status>
+</test>
+<test id="s1-s1-t4" name="Scenario:Verify User registration - unsuported zip/locality ( NYC-10040)">
+<kw type="setup" name="Setup Test" library="common">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'''${TEST_RUN_TYPE}''' not in ('LOCAL', 'SAUCELABS')</arg>
+<arg>Fail</arg>
+<arg>TEST_RUN_TYPE value not supported, only 'LOCAL' and 'SAUCELABS' allowed</arg>
+</arguments>
+<status status="PASS" endtime="20170302 23:09:34.642" starttime="20170302 23:09:34.639"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'''${TEST_RUN_TYPE}''' == 'LOCAL'</arg>
+<arg>Set Up Test Local</arg>
+</arguments>
+<status status="PASS" endtime="20170302 23:09:34.644" starttime="20170302 23:09:34.642"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'''${TEST_RUN_TYPE}''' == 'SAUCELABS'</arg>
+<arg>Set Up Test SauceLabs</arg>
+</arguments>
+<kw name="Set Up Test SauceLabs" library="common">
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on given items.</doc>
+<assign>
+<var>${capabilities}</var>
+</assign>
+<msg timestamp="20170302 23:09:34.648" level="INFO">${capabilities} = {}</msg>
+<status status="PASS" endtime="20170302 23:09:34.648" starttime="20170302 23:09:34.647"></status>
+</kw>
+<kw name="Set To Dictionary" library="Collections">
+<doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
+<arguments>
+<arg>${capabilities}</arg>
+<arg>platform</arg>
+<arg>Mac</arg>
+</arguments>
+<status status="PASS" endtime="20170302 23:09:34.649" starttime="20170302 23:09:34.648"></status>
+</kw>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>http://google.com</arg>
+<arg>${BROWSER}</arg>
+<arg>remote_url=http://phalder1:6dccd111-3e4b-44ce-b2c4-c6b9e6d24231@ondemand.saucelabs.com:80/wd/hub</arg>
+<arg>desired_capabilities=${capabilities}</arg>
+</arguments>
+<msg timestamp="20170302 23:09:34.650" level="INFO">Opening browser 'firefox' to base url 'http://google.com' through remote server at 'http://phalder1:6dccd111-3e4b-44ce-b2c4-c6b9e6d24231@ondemand.saucelabs.com:80/wd/hub'</msg>
+<status status="PASS" endtime="20170302 23:09:46.621" starttime="20170302 23:09:34.650"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20170302 23:09:46.709" starttime="20170302 23:09:46.622"></status>
+</kw>
+<status status="PASS" endtime="20170302 23:09:46.710" starttime="20170302 23:09:34.646"></status>
+</kw>
+<status status="PASS" endtime="20170302 23:09:46.711" starttime="20170302 23:09:34.644"></status>
+</kw>
+<status status="PASS" endtime="20170302 23:09:46.711" starttime="20170302 23:09:34.638"></status>
+</kw>
+<kw name="When user opens registration page" library="common">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${REGISTRATION_PAGE}</arg>
+</arguments>
+<msg timestamp="20170302 23:09:46.714" level="INFO">Opening url 'https://patient.heal.com/register'</msg>
+<status status="PASS" endtime="20170302 23:09:50.622" starttime="20170302 23:09:46.713"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${NONDISCRIMINATION_NOTICE}</arg>
+</arguments>
+<status status="PASS" endtime="20170302 23:09:51.876" starttime="20170302 23:09:50.623"></status>
+</kw>
+<status status="PASS" endtime="20170302 23:09:51.876" starttime="20170302 23:09:46.712"></status>
+</kw>
+<kw name="and user enters registration data" library="functional_keywords">
+<kw name="Generate Random String" library="String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>8</arg>
+</arguments>
+<assign>
+<var>${USERNAME}</var>
+</assign>
+<msg timestamp="20170302 23:09:51.879" level="INFO">${USERNAME} = CIukVFgU</msg>
+<status status="PASS" endtime="20170302 23:09:51.880" starttime="20170302 23:09:51.879"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${FIRST_NAME_TXT_FLD}</arg>
+<arg>test</arg>
+</arguments>
+<msg timestamp="20170302 23:09:51.881" level="INFO">Typing text 'test' into text field 'xpath=//*[@id='input_0']'</msg>
+<status status="PASS" endtime="20170302 23:09:53.236" starttime="20170302 23:09:51.880"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${LAST_NAME_TXT_FLD}</arg>
+<arg>test</arg>
+</arguments>
+<msg timestamp="20170302 23:09:53.237" level="INFO">Typing text 'test' into text field 'xpath=//*[@id='input_1']'</msg>
+<status status="PASS" endtime="20170302 23:09:54.210" starttime="20170302 23:09:53.237"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${EMAIL}</arg>
+<arg>${USERNAME}@qa.com</arg>
+</arguments>
+<msg timestamp="20170302 23:09:54.212" level="INFO">Typing text 'CIukVFgU@qa.com' into text field 'xpath=//*[@id='input_2']'</msg>
+<status status="PASS" endtime="20170302 23:09:55.402" starttime="20170302 23:09:54.211"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${PASSWORD}</arg>
+<arg>Password1</arg>
+</arguments>
+<msg timestamp="20170302 23:09:55.403" level="INFO">Typing text 'Password1' into text field 'xpath=//*[@id='input_3']'</msg>
+<status status="PASS" endtime="20170302 23:09:56.415" starttime="20170302 23:09:55.403"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${CONFIRM_PASSWORD}</arg>
+<arg>Password1</arg>
+</arguments>
+<msg timestamp="20170302 23:09:56.417" level="INFO">Typing text 'Password1' into text field 'xpath=//*[@id='input_4']'</msg>
+<status status="PASS" endtime="20170302 23:09:57.391" starttime="20170302 23:09:56.416"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${PHONE_NUMBER}</arg>
+<arg>18002002000</arg>
+</arguments>
+<msg timestamp="20170302 23:09:57.393" level="INFO">Typing text '18002002000' into text field 'xpath=//*[@id='input_5']'</msg>
+<status status="PASS" endtime="20170302 23:09:58.232" starttime="20170302 23:09:57.392"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${ZIPCODE}</arg>
+<arg>91403</arg>
+</arguments>
+<msg timestamp="20170302 23:09:58.234" level="INFO">Typing text '91403' into text field 'xpath=//*[@id='input_6']'</msg>
+<status status="PASS" endtime="20170302 23:09:58.872" starttime="20170302 23:09:58.233"></status>
+</kw>
+<status status="PASS" endtime="20170302 23:09:58.873" starttime="20170302 23:09:51.878"></status>
+</kw>
+<kw name="and user enters upsupported zip" library="functional_keywords">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${ZIPCODE}</arg>
+<arg>10040</arg>
+</arguments>
+<msg timestamp="20170302 23:09:58.876" level="INFO">Typing text '10040' into text field 'xpath=//*[@id='input_6']'</msg>
+<status status="PASS" endtime="20170302 23:09:59.491" starttime="20170302 23:09:58.875"></status>
+</kw>
+<status status="PASS" endtime="20170302 23:09:59.492" starttime="20170302 23:09:58.874"></status>
+</kw>
+<kw name="and clicks on Create account Button" library="functional_keywords">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${CREATE_ACCOUNT_BTN}</arg>
+</arguments>
+<msg timestamp="20170302 23:09:59.495" level="INFO">Clicking element 'xpath=//button[@type="submit"]'.</msg>
+<status status="PASS" endtime="20170302 23:10:00.285" starttime="20170302 23:09:59.494"></status>
+</kw>
+<status status="PASS" endtime="20170302 23:10:00.285" starttime="20170302 23:09:59.493"></status>
+</kw>
+<kw name="Then user gets the unsupported area information" library="functional_keywords">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${CONTINUE_BTN}</arg>
+</arguments>
+<status status="PASS" endtime="20170302 23:10:00.588" starttime="20170302 23:10:00.287"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>We're Not in Your Area...yet!</arg>
+</arguments>
+<msg timestamp="20170302 23:10:00.770" level="INFO">Current page contains text 'We're Not in Your Area...yet!'.</msg>
+<status status="PASS" endtime="20170302 23:10:00.771" starttime="20170302 23:10:00.589"></status>
+</kw>
+<status status="PASS" endtime="20170302 23:10:00.772" starttime="20170302 23:10:00.286"></status>
+</kw>
+<kw type="teardown" name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20170302 23:10:00.901" starttime="20170302 23:10:00.772"></status>
+</kw>
+<tags>
+<tag>1</tag>
+<tag>functional</tag>
+</tags>
+<status status="PASS" endtime="20170302 23:10:00.902" critical="yes" starttime="20170302 23:09:34.636"></status>
+</test>
+<doc>Open registrations</doc>
+<status status="FAIL" endtime="20170302 23:10:00.904" starttime="20170302 23:03:21.155"></status>
+</suite>
+<suite source="/Users/priyankahalder/Documents/Heal/tests/test_UI.robot" id="s1-s2" name="test UI">
+<test id="s1-s2-t1" name="Test Case: Verify browser title">
+<kw type="setup" name="Setup Test" library="common">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'''${TEST_RUN_TYPE}''' not in ('LOCAL', 'SAUCELABS')</arg>
+<arg>Fail</arg>
+<arg>TEST_RIf" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'''${TEST_RUN_TYPE}''' not in ('LOCAL', 'SAUCELABS')</arg>
+<arg>Fail</arg>
+<arg>TEST_RUN_TYPE value not supported, only 'LOCAL' and 'SAUCELABS' allowed</arg>
+</arguments>
+<status status="PASS" endtime="20170302 23:06:27.937" starttime="20170302 23:06:27.936"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'''${TEST_RUN_TYPE}''' == 'LOCAL'</arg>
+<arg>Set Up Test Local</arg>
+</arguments>
+<kw name="Set Up Test Local" library="common">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${TEST_WEBSITE}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170302 23:06:27.941" level="INFO">Opening browser 'firefox' to base url 'https://patient.heal.com'</msg>
+<status status="PASS" endtime="20170302 23:06:32.790" starttime="20170302 23:06:27.940"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20170302 23:06:33.406" starttime="20170302 23:06:32.790"></status>
+</kw>
+<status status="PASS" endtime="20170302 23:06:33.406" starttime="20170302 23:06:27.939"></status>
+</kw>
+<status status="PASS" endtime="20170302 23:06:33.407" starttime="20170302 23:06:27.938"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'''${TEST_RUN_TYPE}''' == 'SAUCELABS'</arg>
+<arg>Set Up Test SauceLabs</arg>
+</arguments>
+<status status="PASS" endtime="20170302 23:06:33.409" starttime="20170302 23:06:33.407"></status>
+</kw>
+<status status="PASS" endtime="20170302 23:06:33.409" starttime="20170302 23:06:27.935"></status>
+</kw>
+<kw name="When user opens registration page" library="common">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${REGISTRATION_PAGE}</arg>
+</arguments>
+<msg timestamp="20170302 23:06:33.411" level="INFO">Opening url 'https://patient.heal.com/register'</msg>
+<status status="PASS" endtime="20170302 23:06:34.680" starttime="20170302 23:06:33.410"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${NONDISCRIMINATION_NOTICE}</arg>
+</arguments>
+<status status="PASS" endtime="20170302 23:06:34.840" starttime="20170302 23:06:34.681"></status>
+</kw>
+<status status="PASS" endtime="20170302 23:06:34.840" starttime="20170302 23:06:33.410"></status>
+</kw>
+<kw name="The page title is heal - Patient Portal" library="ui_keywords">
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals `title`.</doc>
+<arguments>
+<arg>Heal - Patient Portal</arg>
+</arguments>
+<msg timestamp="20170302 23:06:34.846" level="INFO">Page title is 'Heal - Patient Portal'.</msg>
+<status status="PASS" endtime="20170302 23:06:34.846" starttime="20170302 23:06:34.841"></status>
+</kw>
+<status status="PASS" endtime="20170302 23:06:34.846" starttime="20170302 23:06:34.841"></status>
+</kw>
+<tags>
+<tag>1</tag>
+</tags>
+<status status="PASS" endtime="20170302 23:06:34.847" critical="yes" starttime="20170302 23:06:27.934"></status>
+</test>
+<test id="s1-s2-t2" name="Test Case: Verify Heal Logo is displayed correctly">
+<kw type="setup" name="Setup Test" library="common">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'''${TEST_RUN_TYPE}''' not in ('LOCAL', 'SAUCELABS')</arg>
+<arg>Fail</arg>
+<arg>TEST_RUN_TYPE value not supported, only 'LOCAL' and 'SAUCELABS' allowed</arg>
+</arguments>
+<status status="PASS" endtime="20170302 23:06:34.851" starttime="20170302 23:06:34.849"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'''${TEST_RUN_TYPE}''' == 'LOCAL'</arg>
+<arg>Set Up Test Local</arg>
+</arguments>
+<kw name="Set Up Test Local" library="common">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${TEST_WEBSITE}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170302 23:06:34.855" level="INFO">Opening browser 'firefox' to base url 'https://patient.heal.com'</msg>
+<status status="PASS" endtime="20170302 23:06:39.855" starttime="20170302 23:06:34.855"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20170302 23:06:40.488" starttime="20170302 23:06:39.856"></status>
+</kw>
+<status status="PASS" endtime="20170302 23:06:40.489" starttime="20170302 23:06:34.853"></status>
+</kw>
+<status status="PASS" endtime="20170302 23:06:40.489" starttime="20170302 23:06:34.851"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'''${TEST_RUN_TYPE}''' == 'SAUCELABS'</arg>
+<arg>Set Up Test SauceLabs</arg>
+</arguments>
+<status status="PASS" endtime="20170302 23:06:40.492" starttime="20170302 23:06:40.490"></status>
+</kw>
+<status status="PASS" endtime="20170302 23:06:40.492" starttime="20170302 23:06:34.848"></status>
+</kw>
+<kw name="When user opens registration page" library="common">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${REGISTRATION_PAGE}</arg>
+</arguments>
+<msg timestamp="20170302 23:06:40.494" level="INFO">Opening url 'https://patient.heal.com/register'</msg>
+<status status="PASS" endtime="20170302 23:06:41.099" starttime="20170302 23:06:40.493"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${NONDISCRIMINATION_NOTICE}</arg>
+</arguments>
+<status status="PASS" endtime="20170302 23:06:41.744" starttime="20170302 23:06:41.100"></status>
+</kw>
+<status status="PASS" endtime="20170302 23:06:41.744" starttime="20170302 23:06:40.493"></status>
+</kw>
+<kw name="HEAL logo is displayed correctly" library="ui_keywords">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${HEAL_LOGO}</arg>
+</arguments>
+<status status="PASS" endtime="20170302 23:06:41.767" starttime="20170302 23:06:41.745"></status>
+</kw>
+<status status="PASS" endtime="20170302 23:06:41.768" starttime="20170302 23:06:41.745"></status>
+</kw>
+<tags>
+<tag>2</tag>
+</tags>
+<status status="PASS" endtime="20170302 23:06:41.768" critical="yes" starttime="20170302 23:06:34.847"></status>
+</test>
+<test id="s1-s2-t3" name="Test Case: Verify different UI components are displayed">
+<kw type="setup" name="Setup Test" library="common">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'''${TEST_RUN_TYPE}''' not in ('LOCAL', 'SAUCELABS')</arg>
+<arg>Fail</arg>
+<arg>TEST_RUN_TYPE value not supported, only 'LOCAL' and 'SAUCELABS' allowed</arg>
+</arguments>
+<status status="PASS" endtime="20170302 23:06:41.772" starttime="20170302 23:06:41.771"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'''${TEST_RUN_TYPE}''' == 'LOCAL'</arg>
+<arg>Set Up Test Local</arg>
+</arguments>
+<kw name="Set Up Test Local" library="common">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${TEST_WEBSITE}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170302 23:06:41.775" level="INFO">Opening browser 'firefox' to base url 'https://patient.heal.com'</msg>
+<status status="PASS" endtime="20170302 23:06:46.940" starttime="20170302 23:06:41.774"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20170302 23:06:47.560" starttime="20170302 23:06:46.941"></status>
+</kw>
+<status status="PASS" endtime="20170302 23:06:47.560" starttime="20170302 23:06:41.774"></status>
+</kw>
+<status status="PASS" endtime="20170302 23:06:47.561" starttime="20170302 23:06:41.772"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'''${TEST_RUN_TYPE}''' == 'SAUCELABS'</arg>
+<arg>Set Up Test SauceLabs</arg>
+</arguments>
+<status status="PASS" endtime="20170302 23:06:47.563" starttime="20170302 23:06:47.561"></status>
+</kw>
+<status status="PASS" endtime="20170302 23:06:47.563" starttime="20170302 23:06:41.770"></status>
+</kw>
+<kw name="When user opens registration page" library="common">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${REGISTRATION_PAGE}</arg>
+</arguments>
+<msg timestamp="20170302 23:06:47.565" level="INFO">Opening url 'https://patient.heal.com/register'</msg>
+<status status="PASS" endtime="20170302 23:06:48.023" starttime="20170302 23:06:47.564"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${NONDISCRIMINATION_NOTICE}</arg>
+</arguments>
+<status status="PASS" endtime="20170302 23:06:48.771" starttime="20170302 23:06:48.023"></status>
+</kw>
+<status status="PASS" endtime="20170302 23:06:48.772" starttime="20170302 23:06:47.564"></status>
+</kw>
+<kw name="UI Components are displayed successfully" library="ui_keywords">
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>First Name</arg>
+</arguments>
+<msg timestamp="20170302 23:06:48.804" level="INFO">Current page contains text 'First Name'.</msg>
+<status status="PASS" endtime="20170302 23:06:48.804" starttime="20170302 23:06:48.773"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>Last Name</arg>
+</arguments>
+<msg timestamp="20170302 23:06:48.831" level="INFO">Current page contains text 'Last Name'.</msg>
+<status status="PASS" endtime="20170302 23:06:48.831" starttime="20170302 23:06:48.804"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>Email</arg>
+</arguments>
+<msg timestamp="20170302 23:06:48.862" level="INFO">Current page contains text 'Email'.</msg>
+<status status="PASS" endtime="20170302 23:06:48.863" starttime="20170302 23:06:48.832"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>Password</arg>
+</arguments>
+<msg timestamp="20170302 23:06:48.890" level="INFO">Current page contains text 'Password'.</msg>
+<status status="PASS" endtime="20170302 23:06:48.891" starttime="20170302 23:06:48.863"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>Phone Number</arg>
+</arguments>
+<msg timestamp="20170302 23:06:48.914" level="INFO">Current page contains text 'Phone Number'.</msg>
+<status status="PASS" endtime="20170302 23:06:48.914" starttime="20170302 23:06:48.891"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>Zipcode</arg>
+</arguments>
+<msg timestamp="20170302 23:06:48.939" level="INFO">Current page contains text 'Zipcode'.</msg>
+<status status="PASS" endtime="20170302 23:06:48.939" starttime="20170302 23:06:48.915"></status>
+</kw>
+<status status="PASS" endtime="20170302 23:06:48.940" starttime="20170302 23:06:48.772"></status>
+</kw>
+<doc>verify firsname, last name, email, password , confirm password , phone number , all the buttons and links are displayed</doc>
+<tags>
+<tag>3</tag>
+</tags>
+<status status="PASS" endtime="20170302 23:06:48.940" critical="yes" starttime="20170302 23:06:41.769"></status>
+</test>
+<test id="s1-s2-t4" name="Test Case: Verify policy agreement text is present">
+<kw type="setup" name="Setup Test" library="common">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'''${TEST_RUN_TYPE}''' not in ('LOCAL', 'SAUCELABS')</arg>
+<arg>Fail</arg>
+<arg>TEST_RUN_TYPE value not supported, only 'LOCAL' and 'SAUCELABS' allowed</arg>
+</arguments>
+<status status="PASS" endtime="20170302 23:06:48.944" starttime="20170302 23:06:48.942"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'''${TEST_RUN_TYPE}''' == 'LOCAL'</arg>
+<arg>Set Up Test Local</arg>
+</arguments>
+<kw name="Set Up Test Local" library="common">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${TEST_WEBSITE}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170302 23:06:48.947" level="INFO">Opening browser 'firefox' to base url 'https://patient.heal.com'</msg>
+<status status="PASS" endtime="20170302 23:06:52.574" starttime="20170302 23:06:48.946"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20170302 23:06:53.157" starttime="20170302 23:06:52.575"></status>
+</kw>
+<status status="PASS" endtime="20170302 23:06:53.157" starttime="20170302 23:06:48.946"></status>
+</kw>
+<status status="PASS" endtime="20170302 23:06:53.158" starttime="20170302 23:06:48.944"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'''${TEST_RUN_TYPE}''' == 'SAUCELABS'</arg>
+<arg>Set Up Test SauceLabs</arg>
+</arguments>
+<status status="PASS" endtime="20170302 23:06:53.161" starttime="20170302 23:06:53.159"></status>
+</kw>
+<status status="PASS" endtime="20170302 23:06:53.162" starttime="20170302 23:06:48.942"></status>
+</kw>
+<kw name="When user opens registration page" library="common">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${REGISTRATION_PAGE}</arg>
+</arguments>
+<msg timestamp="20170302 23:06:53.164" level="INFO">Opening url 'https://patient.heal.com/register'</msg>
+<status status="PASS" endtime="20170302 23:06:53.195" starttime="20170302 23:06:53.163"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${NONDISCRIMINATION_NOTICE}</arg>
+</arguments>
+<status status="PASS" endtime="20170302 23:06:55.071" starttime="20170302 23:06:53.195"></status>
+</kw>
+<status status="PASS" endtime="20170302 23:06:55.072" starttime="20170302 23:06:53.162"></status>
+</kw>
+<kw name="then user is able to view the policy agreement text" library="ui_keywords">
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>By pressing Create Account you agree to our</arg>
+</arguments>
+<msg timestamp="20170302 23:06:55.102" level="INFO">Current page contains text 'By pressing Create Account you agree to our'.</msg>
+<status status="PASS" endtime="20170302 23:06:55.102" starttime="20170302 23:06:55.073"></status>
+</kw>
+<status status="PASS" endtime="20170302 23:06:55.103" starttime="20170302 23:06:55.072"></status>
+</kw>
+<tags>
+<tag>4</tag>
+</tags>
+<status status="PASS" endtime="20170302 23:06:55.103" critical="yes" starttime="20170302 23:06:48.941"></status>
+</test>
+<doc>Open registrations</doc>
+<status status="PASS" endtime="20170302 23:06:55.104" starttime="20170302 23:06:27.922"></status>
+</suite>
+<status status="PASS" endtime="20170302 23:06:55.109" starttime="20170302 23:05:57.799"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="8">Critical Tests</stat>
+<stat fail="0" pass="8">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" pass="2">1</stat>
+<stat fail="0" pass="1">2</stat>
+<stat fail="0" pass="1">3</stat>
+<stat fail="0" pass="1">4</stat>
+<stat fail="0" pass="1">error_message</stat>
+<stat fail="0" pass="2">functional</stat>
+<stat fail="0" pass="1">UI</stat>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Tests" pass="8">Tests</stat>
+<stat fail="0" id="s1-s1" name="Functional Flows" pass="4">Tests.Functional Flows</stat>
+<stat fail="0" id="s1-s2" name="test UI" pass="4">Tests.test UI</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

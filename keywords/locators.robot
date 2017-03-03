@@ -3,7 +3,7 @@ Library           Selenium2Library
 
 *** Variables ***
 ${HEAL_LOGO}              xpath=//*[@id='authentication-view']//img[@src="./images/logo@white.png"]
-${REGISTRATION_FORM}      xpath=//*[@id='authentication-view']/form
+${REGISTRATION_FORM}      xpath=//*[@id='authentication-view']//form
 ${CREATE_ACCOUNT_BTN}     xpath=//button[@type="submit"]
 ${HAVE_ACCOUNT_BTN}       xpath=//*[@id='register-view']//a[@ui-sref="authentication.login"]
 ${FIRST_NAME_TXT_FLD}     xpath=//*[@id='input_0']
@@ -20,4 +20,4 @@ ${NOTICE_OF_PRIVACY}      xpath=//*[@id='register-view']//a[@href="https://heal.
 ${NONDISCRIMINATION_NOTICE}    xpath=//*[@id='register-view']//a[@href="https://heal.com/nondiscrimination.php"]
 ${ERROR_MESSAGE}               xpath=//*[@id='register-view']//div[@class="error-messages"]
 ${BOOK_VISIT}                  xpath=//*[@id='book-visit']
-
+${CONTINUE_BTN}        xpath=//button[@ng-click="vm.outOfCoverageSignUp()"]

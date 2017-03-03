@@ -1,6 +1,7 @@
 *** Settings ***
 Documentation     Open registrations
 Test Setup        Set Up Test
+Test Teardown     Close All Browsers
 Resource          ../keywords/common.robot
 Resource          ../keywords/ui_keywords.robot
 Resource          ../keywords/locators.robot
